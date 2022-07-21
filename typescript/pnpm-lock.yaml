@@ -5,18 +5,18 @@ specifiers:
   '@citizenfx/server': latest
   '@overextended/ox_core': latest
   '@overextended/oxmysql': latest
-  '@types/node': ^16.9.1
+  '@types/node': ^16.11.45
   esbuild: ^0.14.49
   typescript: ^4.7.4
 
 dependencies:
-  '@overextended/ox_core': 0.2.1
+  '@overextended/ox_core': 0.2.2
   '@overextended/oxmysql': 1.1.1
 
 devDependencies:
   '@citizenfx/client': 2.0.5742-1
   '@citizenfx/server': 2.0.5742-1
-  '@types/node': 16.11.44
+  '@types/node': 16.11.45
   esbuild: 0.14.49
   typescript: 4.7.4
 
@@ -28,12 +28,12 @@ packages:
   /@citizenfx/server/2.0.5742-1:
     resolution: {integrity: sha512-P/ke1u4K0BMlN2BxL1r7DZmJt8DJW97l2eeahoIeOZ7jaZQlrgw5E+f9xi3UZh6CzYXg9kPidc64RGkMFkJQTw==}
 
-  /@overextended/ox_core/0.2.1:
-    resolution: {integrity: sha512-Vj9ja7IW4nXBoHPXW7UGXZdhO2Z2orErN8b+s+RHz9oQvVdpfzTsqh/mqwDiwMVHhVhgj90DeGmod/WURHHrKQ==}
+  /@overextended/ox_core/0.2.2:
+    resolution: {integrity: sha512-L5VVV21Acht+rA0e1GsRvM2Aqu2LQCqUifmDdmDfMMcBpdI6jKBNl1DbweFhflGDWRQIY0SdWiM513yaS0fsTA==}
     dependencies:
       '@citizenfx/client': 2.0.5742-1
       '@citizenfx/server': 2.0.5742-1
-      '@types/node': 16.11.44
+      '@types/node': 16.11.45
       typescript: 4.7.4
     dev: false
 
@@ -41,8 +41,8 @@ packages:
     resolution: {integrity: sha512-s5ovapUKVV0uifZG9I/yxwCfqickihWWyTbNPG03Hk7VXsfGB7sGaOX5diKGnu04tBCEPLli+Jh6pPEO6582Bw==}
     dev: false
 
-  /@types/node/16.11.44:
-    resolution: {integrity: sha512-gwP6+QDgL5TDBIWh1lbYh3EFPU11pa+8xcamcsA3ROkp3A9X+/3Y5cRgq93VPEEE+CGfxlQnqkg1kkWGBgh3fw==}
+  /@types/node/16.11.45:
+    resolution: {integrity: sha512-3rKg/L5x0rofKuuUt5zlXzOnKyIHXmIu5R8A0TuNDMF2062/AOIDBciFIjToLEJ/9F9DzkHNot+BpNsMI1OLdQ==}
 
   /esbuild-android-64/0.14.49:
     resolution: {integrity: sha512-vYsdOTD+yi+kquhBiFWl3tyxnj2qZJsl4tAqwhT90ktUdnyTizgle7TjNx6Ar1bN7wcwWqZ9QInfdk2WVagSww==}

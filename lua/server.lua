@@ -29,8 +29,6 @@ CreateThread(function()
         --     model = 'sultanrs',
         --     owner = player.charid,
         -- }, player.getCoords(), GetEntityHeading(player.ped))
-
-        -- Select the first owned vehicle from the database.
     end
 end)
 
@@ -45,6 +43,8 @@ end)
 
 RegisterCommand('getveh', function(source)
     local player = Ox.GetPlayer(source)
+
+    -- Fetch a vehicle owned by the player from the database.
     local vehicleId = MySQL.scalar.await('SELECT id FROM vehicles WHERE owner = ? LIMIT 1', { player.charid })
 
     if vehicleId then
