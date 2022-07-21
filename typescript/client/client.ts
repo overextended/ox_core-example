@@ -16,6 +16,10 @@ async function init() {
   console.log(player);
   console.log(player.hasGroup("police"));
   console.log(player.getCoords(), GetEntityHeading(player.getPed()));
+
+  while (player) await new Promise((resolve) => setTimeout(resolve, 0));
+
+  console.log("logged out!");  
 }
 
 onNet("ox:playerLoaded", init);

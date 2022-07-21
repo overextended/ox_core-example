@@ -6,8 +6,15 @@ RegisterCommand('saveveh', function()
 end)
 
 local function init()
+    print(json.encode(player, { indent = true }))
     print(player.hasGroup('police'))
     print(player.getCoords(), GetEntityHeading(cache.ped))
+
+    while player do
+        Wait(0)
+    end
+
+    print('logged out!')
 end
 
 RegisterNetEvent('ox:playerLoaded', init)
