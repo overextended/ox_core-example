@@ -18,7 +18,7 @@ function getRandomInt(min: number, max: number) {
   const player = players[0];
 
   if (player) {
-    // Print the table, containing their identity, ids, phone number, etc.
+    // Print the object, containing their identity, ids, phone number, etc.
     console.log(player);
 
     // Set 'police' to a random grade.
@@ -28,7 +28,7 @@ function getRandomInt(min: number, max: number) {
     const group = player.getGroup("police");
     console.log(player.source, "police grade:", group);
 
-    // Retrieve all player metadata. These values are stored separately from the standard 'player' table.
+    // Retrieve all player metadata. These values are stored separately from the standard 'player' object.
     const data = player.get();
     console.log(data);
 
@@ -57,22 +57,24 @@ RegisterCommand(
   "getveh",
   async (source: number) => {
     const player = source > 0 && GetPlayer(source);
+    if (!player) return;
 
     // Fetch a vehicle owned by the player from the database.
     const vehicleId = <number>(
-      await MySQL.scalar("SELECT id FROM vehicles WHERE owner = ? LIMIT 1", [
-        player ? player.charid : 1,
-      ])
+      await MySQL.scalar(
+        "SELECT id FROM vehicles WHERE owner = ? AND stored IS NOT NULL LIMIT 1",
+        [player.charid]
+      )
     );
 
     if (vehicleId) {
-      const coords = player ? player.getCoords(true) : [0, 0, 0];
+      const coords = player.getCoords(true);
 
       // Spawn it
       const vehicle = await CreateVehicle(
         vehicleId,
         [coords[0], coords[1] + 3.0, coords[2] + 1.0],
-        player ? GetEntityHeading(player.ped) : 90
+        GetEntityHeading(player.ped)
       );
 
       if (vehicle) {
@@ -93,6 +95,8 @@ onNet(
   "saveProperties",
   function (netid: number, data: Record<string, unknown>) {
     const vehicle = GetVehicleFromNetId(netid);
+    if (!vehicle) return;
+
     vehicle.set("properties", data);
     vehicle.store("wat");
   }
