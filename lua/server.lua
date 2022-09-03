@@ -38,36 +38,42 @@ CreateThread(function()
         groups = {['sheriff'] = 3, ['police'] = 3}
     })
 
-    print(json.encode(players, {indent=true}))
+    print(json.encode(players, { indent = true }))
 end)
 
 RegisterCommand('getveh', function(source)
     local player = Ox.GetPlayer(source)
+    if not player then return end
 
     -- Fetch a vehicle owned by the player from the database.
-    local vehicleId = MySQL.scalar.await('SELECT id FROM vehicles WHERE owner = ? LIMIT 1', { player.charid })
+    CreateThread(function()
+        local vehicleId = MySQL.scalar.await('SELECT id FROM vehicles WHERE owner = ? AND stored IS NOT NULL LIMIT 1', { player.charid, })
 
-    if vehicleId then
-        local coords = player.getCoords()
+        if vehicleId then
+            local coords = player.getCoords()
 
-        -- Spawn it
-        local vehicle = Ox.CreateVehicle(vehicleId, vector3(coords.x, coords.y + 3.0, coords.z + 1.0), GetEntityHeading(player.ped))
+            -- Spawn it
+            local vehicle = Ox.CreateVehicle(vehicleId, vector3(coords.x, coords.y + 3.0, coords.z + 1.0),
+                GetEntityHeading(player.ped))
 
-        if vehicle then
-            -- Print the vehicle table.
-            print(json.encode(vehicle, { indent = true }))
+            if vehicle then
+                -- Print the vehicle table.
+                print(json.encode(vehicle, { indent = true }))
 
-            -- Print the vehicle metadata.
-            print(json.encode(vehicle.get(), { indent = true }))
+                -- Print the vehicle metadata.
+                print(json.encode(vehicle.get(), { indent = true }))
 
-            print(vehicle.getCoords())
+                print(vehicle.getCoords())
 
+            end
         end
-    end
+    end)
 end)
 
 RegisterNetEvent('saveProperties', function(netid, data)
     local vehicle = Ox.GetVehicleFromNetId(netid)
+    if not vehicle then return end
+
     vehicle.set('properties', data)
     vehicle.store('wat')
 end)
