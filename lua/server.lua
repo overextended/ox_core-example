@@ -77,3 +77,16 @@ RegisterNetEvent('saveProperties', function(netid, data)
     vehicle.set('properties', data)
     vehicle.store('wat')
 end)
+
+
+CreateThread(function()
+    while true do
+        Wait(1000)
+        local player = Ox.GetPlayers(true)[1]
+
+        if player then
+            -- Set a random number for the "test" metadata property, and replicate to client.
+            player.set('test', math.random(1, 100), true)
+        end
+    end
+end)

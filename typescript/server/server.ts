@@ -101,3 +101,12 @@ onNet(
     vehicle.store("wat");
   }
 );
+
+setInterval(() => {
+  const player = GetPlayers(true)[0];
+
+  if (player) {
+    // Set a random number for the "test" metadata property, and replicate to client.
+    player.set("test", getRandomInt(1, 100), true);
+  }
+});
