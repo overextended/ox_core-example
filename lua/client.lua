@@ -1,3 +1,13 @@
+---@param value number
+lib.onCache('vehicle', function(value)
+    lib.notify({
+        title = 'Updated vehicle cache',
+        description = ('%s updated to %s'):format(cache.vehicle, value),
+        type = 'inform',
+        icon = 'car',
+    })
+end)
+
 RegisterCommand('saveveh', function()
     if not cache.vehicle then return end
 
