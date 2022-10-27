@@ -16,12 +16,13 @@ RegisterCommand('saveveh', function()
 end)
 
 local function init()
-    print(json.encode(player, { indent = true }))
+    print(json.encode(player, { indent = true, }))
     print(player.hasGroup('police'))
     print(player.getCoords(), GetEntityHeading(cache.ped))
 
     while player do
-        Wait(0)
+        print(player.test or 'nil')
+        Wait(1000)
     end
 
     print('logged out!')
