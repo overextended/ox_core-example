@@ -7,12 +7,13 @@
   "devDependencies": {
     "@citizenfx/client": "latest",
     "@citizenfx/server": "latest",
-    "@types/node": "^16.11.56",
+    "@types/node": "^16.18.2",
     "esbuild": "^0.14.54",
-    "typescript": "^4.8.2"
+    "typescript": "^4.8.4"
   },
   "dependencies": {
     "@overextended/ox_core": "latest",
+    "@overextended/ox_lib": "latest",
     "@overextended/oxmysql": "latest"
   }
 }

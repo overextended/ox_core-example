@@ -4,29 +4,39 @@ specifiers:
   '@citizenfx/client': latest
   '@citizenfx/server': latest
   '@overextended/ox_core': latest
+  '@overextended/ox_lib': latest
   '@overextended/oxmysql': latest
-  '@types/node': ^16.11.56
+  '@types/node': ^16.18.2
   esbuild: ^0.14.54
-  typescript: ^4.8.2
+  typescript: ^4.8.4
 
 dependencies:
-  '@overextended/ox_core': 0.5.0
+  '@overextended/ox_core': 0.10.1
+  '@overextended/ox_lib': 2.14.2
   '@overextended/oxmysql': 1.1.1
 
 devDependencies:
-  '@citizenfx/client': 2.0.5850-1
-  '@citizenfx/server': 2.0.5850-1
-  '@types/node': 16.11.56
+  '@citizenfx/client': 2.0.5975-1
+  '@citizenfx/server': 2.0.5975-1
+  '@types/node': 16.18.2
   esbuild: 0.14.54
-  typescript: 4.8.2
+  typescript: 4.8.4
 
 packages:
 
-  /@citizenfx/client/2.0.5850-1:
-    resolution: {integrity: sha512-Y7cZ57qBKAXD1zymf2G9lL0wEzlaB4yyeI4qHkLLMS0hNiZ+9LRp9+jttOO/+pS4U82RusOBclxDNlB9+A4ygg==}
+  /@citizenfx/client/2.0.5885-1:
+    resolution: {integrity: sha512-Ba5YYfxhZ82PcOY+2rjqDElTzPt7NrN6/o2U+wYPKK2VU/wRdCsMonpMsr7dYob2ToN5Qe96w5VNI3m5OrouJQ==}
+    dev: false
 
-  /@citizenfx/server/2.0.5850-1:
-    resolution: {integrity: sha512-5aUT0+ASV6rkO9GdtTTKGAsZDplXF14Xwcwstu6OxXUfeJa+qaUNBjvZriyf5/Dz4OLFBpLD1LJwRczdeycjCQ==}
+  /@citizenfx/client/2.0.5975-1:
+    resolution: {integrity: sha512-e/R5rJmXCoQi6ECt7aO+HnbXdiov4MiRfce+ld9XEaNd/ZEhbihYqVl740GxDgKynqWqHK4sJo8mnAH8LJsqNg==}
+
+  /@citizenfx/server/2.0.5885-1:
+    resolution: {integrity: sha512-q8KRecfjJ3RjCfBT/3CSHNTr2efUs9uq8pIoPF4TGkn5X7jgTBprrp3VMayaee3Xekay3RTufpzsOaeHUntQeA==}
+    dev: false
+
+  /@citizenfx/server/2.0.5975-1:
+    resolution: {integrity: sha512-PPU+kaDQYHeOxv8BczPoCCw6pSva2xZF6JyJRYsUKCsxldcEUiA1/LzTyopp7FOJ5uTaED/U9ujavbqGDe8wYw==}
 
   /@esbuild/linux-loong64/0.14.54:
     resolution: {integrity: sha512-bZBrLAIX1kpWelV0XemxBZllyRmM6vgFQQG2GdNb+r3Fkp0FOh1NJSvekXDs7jq70k4euu1cryLMfU+mTXlEpw==}
@@ -37,21 +47,62 @@ packages:
     dev: true
     optional: true
 
-  /@overextended/ox_core/0.5.0:
-    resolution: {integrity: sha512-DlJqBAFz0XtP84Kwd1R6MuiSQqPa6nOGChJG7lqqkOPo+ovHv8jyZ4lOjI/GhYPr6H+RtGeMRDon/1cSMEvbwQ==}
+  /@fortawesome/fontawesome-common-types/6.1.1:
+    resolution: {integrity: sha512-wVn5WJPirFTnzN6tR95abCx+ocH+3IFLXAgyavnf9hUmN0CfWoDjPT/BAWsUVwSlYYVBeCLJxaqi7ZGe4uSjBA==}
+    engines: {node: '>=6'}
+    requiresBuild: true
+    dev: false
+
+  /@overextended/ox_core/0.10.1:
+    resolution: {integrity: sha512-nw4qveOW0+Axv9az02IYhQeQZE+9fIosqFB6s/IjtxDLTWyBthcLxDxSN4ZQsbo3OuzaVftx9NQB/DIQLuln2A==}
     dependencies:
-      '@citizenfx/client': 2.0.5850-1
-      '@citizenfx/server': 2.0.5850-1
-      '@types/node': 16.11.56
-      typescript: 4.8.2
+      '@citizenfx/client': 2.0.5975-1
+      '@citizenfx/server': 2.0.5975-1
+      '@types/node': 16.18.2
+      typescript: 4.8.4
+    dev: false
+
+  /@overextended/ox_lib/2.14.2:
+    resolution: {integrity: sha512-Jpz6XqSzuOz9D/xWILNXtvVtiaORuFo2e55PVjYjZOKsjGPnwRwaStLWZyxPNBlgnov+0NHcBXbtfz8eT1we5w==}
+    dependencies:
+      '@citizenfx/client': 2.0.5885-1
+      '@citizenfx/server': 2.0.5885-1
+      '@fortawesome/fontawesome-common-types': 6.1.1
+      '@types/node': 16.9.1
+      '@types/react': 18.0.24
+      typescript: 4.8.4
     dev: false
 
   /@overextended/oxmysql/1.1.1:
     resolution: {integrity: sha512-s5ovapUKVV0uifZG9I/yxwCfqickihWWyTbNPG03Hk7VXsfGB7sGaOX5diKGnu04tBCEPLli+Jh6pPEO6582Bw==}
     dev: false
 
-  /@types/node/16.11.56:
-    resolution: {integrity: sha512-aFcUkv7EddxxOa/9f74DINReQ/celqH8DiB3fRYgVDM2Xm5QJL8sl80QKuAnGvwAsMn+H3IFA6WCrQh1CY7m1A==}
+  /@types/node/16.18.2:
+    resolution: {integrity: sha512-KIGQJyya+opDCFvDSZMNNS899ov5jlNdtN7PypgHWeb8e+5vWISdwTRo/ClsNVlmDihzOGqFyNBDamUs7TQQCA==}
+
+  /@types/node/16.9.1:
+    resolution: {integrity: sha512-QpLcX9ZSsq3YYUUnD3nFDY8H7wctAhQj/TFKL8Ya8v5fMm3CFXxo8zStsLAl780ltoYoo1WvKUVGBQK+1ifr7g==}
+    dev: false
+
+  /@types/prop-types/15.7.5:
+    resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
+    dev: false
+
+  /@types/react/18.0.24:
+    resolution: {integrity: sha512-wRJWT6ouziGUy+9uX0aW4YOJxAY0bG6/AOk5AW5QSvZqI7dk6VBIbXvcVgIw/W5Jrl24f77df98GEKTJGOLx7Q==}
+    dependencies:
+      '@types/prop-types': 15.7.5
+      '@types/scheduler': 0.16.2
+      csstype: 3.1.1
+    dev: false
+
+  /@types/scheduler/0.16.2:
+    resolution: {integrity: sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==}
+    dev: false
+
+  /csstype/3.1.1:
+    resolution: {integrity: sha512-DJR/VvkAvSZW9bTouZue2sSxDwdTN92uHjqeKVm+0dAqdfNykRzQ95tay8aXMBAAPpUiq4Qcug2L7neoRh2Egw==}
+    dev: false
 
   /esbuild-android-64/0.14.54:
     resolution: {integrity: sha512-Tz2++Aqqz0rJ7kYBfz+iqyE3QMycD4vk7LBRyWaAVFgFtQ/O8EJOnVmTOiDWYZ/uYzB4kvP+bqejYdVKzE5lAQ==}
@@ -262,7 +313,7 @@ packages:
       esbuild-windows-arm64: 0.14.54
     dev: true
 
-  /typescript/4.8.2:
-    resolution: {integrity: sha512-C0I1UsrrDHo2fYI5oaCGbSejwX4ch+9Y5jTQELvovfmFkK3HHSZJB8MSJcWLmCUBzQBchCrZ9rMRV6GuNrvGtw==}
+  /typescript/4.8.4:
+    resolution: {integrity: sha512-QCh+85mCy+h0IGff8r5XWzOVSbBO+KfeYrMQh7NJ58QujwcE22u+NUSmUxqF+un70P9GXKxa2HCNiTTMJknyjQ==}
     engines: {node: '>=4.2.0'}
     hasBin: true
