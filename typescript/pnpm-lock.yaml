@@ -6,19 +6,19 @@ specifiers:
   '@overextended/ox_core': latest
   '@overextended/ox_lib': latest
   '@overextended/oxmysql': latest
-  '@types/node': ^16.18.2
+  '@types/node': ^16.18.3
   esbuild: ^0.14.54
   typescript: ^4.8.4
 
 dependencies:
-  '@overextended/ox_core': 0.10.1
-  '@overextended/ox_lib': 2.14.2
+  '@overextended/ox_core': 0.11.0
+  '@overextended/ox_lib': 2.15.1
   '@overextended/oxmysql': 1.1.1
 
 devDependencies:
-  '@citizenfx/client': 2.0.5975-1
-  '@citizenfx/server': 2.0.5975-1
-  '@types/node': 16.18.2
+  '@citizenfx/client': 2.0.5985-1
+  '@citizenfx/server': 2.0.5985-1
+  '@types/node': 16.18.3
   esbuild: 0.14.54
   typescript: 4.8.4
 
@@ -28,15 +28,15 @@ packages:
     resolution: {integrity: sha512-Ba5YYfxhZ82PcOY+2rjqDElTzPt7NrN6/o2U+wYPKK2VU/wRdCsMonpMsr7dYob2ToN5Qe96w5VNI3m5OrouJQ==}
     dev: false
 
-  /@citizenfx/client/2.0.5975-1:
-    resolution: {integrity: sha512-e/R5rJmXCoQi6ECt7aO+HnbXdiov4MiRfce+ld9XEaNd/ZEhbihYqVl740GxDgKynqWqHK4sJo8mnAH8LJsqNg==}
+  /@citizenfx/client/2.0.5985-1:
+    resolution: {integrity: sha512-j/7abiZ1K025iJ7utCcwrnQxQZQku812RL+S9TOqVaPuZIbnX7uBEJocBxxSpLD6rKxlQvBs8fI9t2s6/H1SMw==}
 
   /@citizenfx/server/2.0.5885-1:
     resolution: {integrity: sha512-q8KRecfjJ3RjCfBT/3CSHNTr2efUs9uq8pIoPF4TGkn5X7jgTBprrp3VMayaee3Xekay3RTufpzsOaeHUntQeA==}
     dev: false
 
-  /@citizenfx/server/2.0.5975-1:
-    resolution: {integrity: sha512-PPU+kaDQYHeOxv8BczPoCCw6pSva2xZF6JyJRYsUKCsxldcEUiA1/LzTyopp7FOJ5uTaED/U9ujavbqGDe8wYw==}
+  /@citizenfx/server/2.0.5985-1:
+    resolution: {integrity: sha512-70kM5elyI3MT5J3ZRAKFjo84W7bldn40qRH4k3ZacEhYtv3vvd7xzWVR8XiJUN8QNoF6XJplTdh4KdbLYd2nCg==}
 
   /@esbuild/linux-loong64/0.14.54:
     resolution: {integrity: sha512-bZBrLAIX1kpWelV0XemxBZllyRmM6vgFQQG2GdNb+r3Fkp0FOh1NJSvekXDs7jq70k4euu1cryLMfU+mTXlEpw==}
@@ -53,17 +53,17 @@ packages:
     requiresBuild: true
     dev: false
 
-  /@overextended/ox_core/0.10.1:
-    resolution: {integrity: sha512-nw4qveOW0+Axv9az02IYhQeQZE+9fIosqFB6s/IjtxDLTWyBthcLxDxSN4ZQsbo3OuzaVftx9NQB/DIQLuln2A==}
+  /@overextended/ox_core/0.11.0:
+    resolution: {integrity: sha512-8PLq54SBShCvSJwiNCExcbyUX4vM4e9qNzz51QGZhGlqLaqmLp7+WhzaqYnKtp06LLj9WD5QD+QPbB7IFu3ddg==}
     dependencies:
-      '@citizenfx/client': 2.0.5975-1
-      '@citizenfx/server': 2.0.5975-1
-      '@types/node': 16.18.2
+      '@citizenfx/client': 2.0.5985-1
+      '@citizenfx/server': 2.0.5985-1
+      '@types/node': 16.18.3
       typescript: 4.8.4
     dev: false
 
-  /@overextended/ox_lib/2.14.2:
-    resolution: {integrity: sha512-Jpz6XqSzuOz9D/xWILNXtvVtiaORuFo2e55PVjYjZOKsjGPnwRwaStLWZyxPNBlgnov+0NHcBXbtfz8eT1we5w==}
+  /@overextended/ox_lib/2.15.1:
+    resolution: {integrity: sha512-bPxlSMGeM8gEp8ou4DRnl/ADyJVgjedhtJdtfMvnFpi7fM/jprRM/7fKMcY7/iaa4ildMqnCh37yuhXBbUdAdA==}
     dependencies:
       '@citizenfx/client': 2.0.5885-1
       '@citizenfx/server': 2.0.5885-1
@@ -77,8 +77,8 @@ packages:
     resolution: {integrity: sha512-s5ovapUKVV0uifZG9I/yxwCfqickihWWyTbNPG03Hk7VXsfGB7sGaOX5diKGnu04tBCEPLli+Jh6pPEO6582Bw==}
     dev: false
 
-  /@types/node/16.18.2:
-    resolution: {integrity: sha512-KIGQJyya+opDCFvDSZMNNS899ov5jlNdtN7PypgHWeb8e+5vWISdwTRo/ClsNVlmDihzOGqFyNBDamUs7TQQCA==}
+  /@types/node/16.18.3:
+    resolution: {integrity: sha512-jh6m0QUhIRcZpNv7Z/rpN+ZWXOicUUQbSoWks7Htkbb9IjFQj4kzcX/xFCkjstCj5flMsN8FiSvt+q+Tcs4Llg==}
 
   /@types/node/16.9.1:
     resolution: {integrity: sha512-QpLcX9ZSsq3YYUUnD3nFDY8H7wctAhQj/TFKL8Ya8v5fMm3CFXxo8zStsLAl780ltoYoo1WvKUVGBQK+1ifr7g==}
