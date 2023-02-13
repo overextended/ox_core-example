@@ -7,9 +7,9 @@
   "devDependencies": {
     "@citizenfx/client": "latest",
     "@citizenfx/server": "latest",
-    "@types/node": "^16.18.3",
+    "@types/node": "^16.18.12",
     "esbuild": "^0.14.54",
-    "typescript": "^4.8.4"
+    "typescript": "^4.9.5"
   },
   "dependencies": {
     "@overextended/ox_core": "latest",

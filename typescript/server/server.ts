@@ -68,7 +68,7 @@ RegisterCommand(
     );
 
     if (vehicleId) {
-      const coords = player.getCoords(true);
+      const coords = player.getCoords();
 
       // Spawn it
       const vehicle = await CreateVehicle(
@@ -98,7 +98,7 @@ onNet(
     if (!vehicle) return;
 
     vehicle.set("properties", data);
-    vehicle.store("wat");
+    vehicle.setStored("impound", true);
   }
 );
 

@@ -75,7 +75,7 @@ RegisterNetEvent('saveProperties', function(netid, data)
     if not vehicle then return end
 
     vehicle.set('properties', data)
-    vehicle.store('wat')
+    vehicle.setStored('impound', true)
 end)
 
 
