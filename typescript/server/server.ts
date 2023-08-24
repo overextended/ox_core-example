@@ -12,7 +12,7 @@ function getRandomInt(min: number, max: number) {
 
 (async () => {
   // Get an array containing all players as instances of CPlayer.
-  const players = GetPlayers(true);
+  const players = GetPlayers();
 
   // Get the first entry
   const player = players[0];
@@ -46,7 +46,7 @@ function getRandomInt(min: number, max: number) {
 
 (async () => {
   // Get an array containing all players in the police or sheriff groups, with grade 3 or higher.
-  const players = GetPlayers(true, {
+  const players = GetPlayers({
     groups: { sheriff: 3, police: 3 },
   });
 
@@ -103,7 +103,7 @@ onNet(
 );
 
 setInterval(() => {
-  const player = GetPlayers(true)[0];
+  const player = GetPlayers()[0];
 
   if (player) {
     // Set a random number for the "test" metadata property, and replicate to client.

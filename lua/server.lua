@@ -1,6 +1,6 @@
 CreateThread(function()
     -- Get an array containing all players, and apply metamethods.
-    local players = Ox.GetPlayers(true)
+    local players = Ox.GetPlayers()
 
     -- Get the first entry
     local player = players[1]
@@ -34,7 +34,7 @@ end)
 
 CreateThread(function()
     -- Get an array containing all players in the police or sheriff groups, with grade 3 or higher.
-    local players = Ox.GetPlayers(true, {
+    local players = Ox.GetPlayers({
         groups = {['sheriff'] = 3, ['police'] = 3}
     })
 
@@ -79,14 +79,11 @@ RegisterNetEvent('saveProperties', function(netid, data)
 end)
 
 
-CreateThread(function()
-    while true do
-        Wait(1000)
-        local player = Ox.GetPlayers(true)[1]
+SetInterval(function()
+    local player = Ox.GetPlayers()[1]
 
-        if player then
-            -- Set a random number for the "test" metadata property, and replicate to client.
-            player.set('test', math.random(1, 100), true)
-        end
+    if player then
+        -- Set a random number for the "test" metadata property, and replicate to client.
+        player.set('test', math.random(1, 100), true)
     end
-end)
+end, 1000)
