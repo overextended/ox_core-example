@@ -63,7 +63,7 @@ RegisterCommand(
     const vehicleId = <number>(
       await MySQL.scalar(
         "SELECT id FROM vehicles WHERE owner = ? AND stored IS NOT NULL LIMIT 1",
-        [player.charid]
+        [player.charId]
       )
     );
 

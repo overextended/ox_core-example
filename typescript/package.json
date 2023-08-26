@@ -7,7 +7,7 @@
   "devDependencies": {
     "@citizenfx/client": "latest",
     "@citizenfx/server": "latest",
-    "@types/node": "^16.18.44",
+    "@types/node": "^16.18.46",
     "esbuild": "^0.14.54"
   },
   "dependencies": {

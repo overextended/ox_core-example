@@ -7,7 +7,7 @@ settings:
 dependencies:
   '@overextended/ox_core':
     specifier: latest
-    version: 0.18.0
+    version: 0.19.0
   '@overextended/ox_lib':
     specifier: ^3.9.0
     version: 3.9.0(@emotion/react@11.11.1)(@mantine/hooks@6.0.19)(react-dom@18.2.0)(react@18.2.0)
@@ -23,8 +23,8 @@ devDependencies:
     specifier: latest
     version: 2.0.6645-1
   '@types/node':
-    specifier: ^16.18.44
-    version: 16.18.44
+    specifier: ^16.18.46
+    version: 16.18.46
   esbuild:
     specifier: ^0.14.54
     version: 0.14.54
@@ -294,12 +294,12 @@ packages:
     resolution: {integrity: sha512-phuBBGdDPxZiZyw5CaFs1XWfvllnEtwATMdLaNucwMofVg/O/FjlP1bTUq4SOm4qhSZ4Zdo351ijHzBSIbZs6g==}
     dev: false
 
-  /@overextended/ox_core@0.18.0:
-    resolution: {integrity: sha512-okNn/IrPkYjS7eN3yDkA0wlEOFc8t26bvy94MNrQpYFXlS+SsB/shcdLBCR9tFmkVJh+r1uXGQac5BkwwfhZeQ==}
+  /@overextended/ox_core@0.19.0:
+    resolution: {integrity: sha512-eQNYP6HesrswW4EZIKwNDf74+FN9Z0iZeZfV9oVc+Wn2yL8kMmFPgTwd3ggxlML9skr2sEbEM0S+YpSBBhMCPw==}
     dependencies:
       '@citizenfx/client': 2.0.6645-1
       '@citizenfx/server': 2.0.6645-1
-      '@types/node': 16.18.44
+      '@types/node': 16.18.46
       typescript: 4.9.5
     dev: false
 
@@ -437,8 +437,8 @@ packages:
       react: 18.2.0
     dev: false
 
-  /@types/node@16.18.44:
-    resolution: {integrity: sha512-PZXtT+wqSMHnLPVExTh+tMt1VK+GvjRLsGZMbcQ4Mb/cG63xJig/TUmgrDa9aborl2i22UnpIzHYNu7s97NbBQ==}
+  /@types/node@16.18.46:
+    resolution: {integrity: sha512-Mnq3O9Xz52exs3mlxMcQuA7/9VFe/dXcrgAyfjLkABIqxXKOgBRjyazTxUbjsxDa4BP7hhPliyjVTP9RDP14xg==}
 
   /@types/node@16.9.1:
     resolution: {integrity: sha512-QpLcX9ZSsq3YYUUnD3nFDY8H7wctAhQj/TFKL8Ya8v5fMm3CFXxo8zStsLAl780ltoYoo1WvKUVGBQK+1ifr7g==}

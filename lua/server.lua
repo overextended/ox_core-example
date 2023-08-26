@@ -47,7 +47,7 @@ RegisterCommand('getveh', function(source)
 
     -- Fetch a vehicle owned by the player from the database.
     CreateThread(function()
-        local vehicleId = MySQL.scalar.await('SELECT id FROM vehicles WHERE owner = ? AND stored IS NOT NULL LIMIT 1', { player.charid, })
+        local vehicleId = MySQL.scalar.await('SELECT id FROM vehicles WHERE owner = ? AND stored IS NOT NULL LIMIT 1', { player.charId, })
 
         if vehicleId then
             local coords = player.getCoords()
