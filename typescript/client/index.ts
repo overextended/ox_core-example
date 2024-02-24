@@ -24,9 +24,11 @@ RegisterCommand(
 async function init() {
   const player = GetPlayer();
 
+  if (!player.charId) return;
+
   console.log(player);
+  console.log(player.getCoords());
   console.log(player.getGroup("police"));
-  console.log(player.getCoords(), GetEntityHeading(cache.ped));
 
   while (player.charId) {
     console.log(player.stateId);
@@ -36,9 +38,8 @@ async function init() {
   console.log("logged out!");
 }
 
-onNet("ox:playerLoaded", init);
-init();
+setImmediate(init);
 
-onNet("ox:playerLogout", () => {
-  console.log("logged out");
-});
+onNet("ox:playerLoaded", init);
+
+onNet("ox:playerLogout", () => console.log("logged out"));

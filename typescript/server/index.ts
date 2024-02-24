@@ -12,14 +12,14 @@ function getRandomInt(min: number, max: number) {
 }
 
 (async () => {
-  // Get an array containing all players as instances of CPlayer.
+  // Get an array containing all players as instances of OxPlayer.
   const players = Object.values(GetPlayers());
 
-  // Get the first entry
+  // Get the first entry.
   const player = players[0];
 
   if (player) {
-    // Print the object, containing their identity, ids, phone number, etc.
+    // Print the object, containing basic data about their player and active character.
     console.log(player);
 
     // Set 'police' to a random grade.
@@ -32,23 +32,17 @@ function getRandomInt(min: number, max: number) {
     // Retrieve the player's gender. These values are stored separately from the standard 'player' object.
     const gender = player.get("gender");
     console.log(gender);
-
-    // This can create a new persistent vehicle, owned by the player.
-    // const vehicle = CreateVehicle({
-    //     model: 'sultanrs',
-    //     owner: player.charid,
-    // }, player.getCoords(), GetEntityHeading(player.ped))
   }
 })();
 
-// (async () => {
-//   // Get an array containing all players in the police or sheriff groups, with grade 3 or higher.
-//   const players = GetPlayers({
-//     groups: { sheriff: 3, police: 3 },
-//   });
+(async () => {
+  // Get an object containing all players in the police or sheriff groups, with grade 3 or higher.
+  const players = GetPlayers({
+    groups: { sheriff: 3, police: 3 },
+  });
 
-//   console.log(players);
-// })();
+  console.log('cops', players);
+})();
 
 RegisterCommand(
   "getveh",
@@ -91,7 +85,7 @@ RegisterCommand(
 onNet(
   "saveProperties",
   function (netId: number, data: Record<string, unknown>) {
-    console.log(netId)
+    console.log(netId);
     const vehicle = GetVehicleFromNetId(netId);
     if (!vehicle) return;
 

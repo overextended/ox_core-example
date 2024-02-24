@@ -3,7 +3,7 @@ lib.onCache('vehicle', function(value)
     lib.notify({
         title = 'Updated vehicle cache',
         description = ('%s updated to %s'):format(cache.vehicle, value),
-        type = 'inform',
+        type = 'info',
         icon = 'car',
     })
 end)
@@ -16,23 +16,25 @@ RegisterCommand('saveveh', function()
 end)
 
 local function init()
-    print(json.encode(player, { indent = true, }))
-    print(player.hasGroup('police'))
-    print(player.getCoords(), GetEntityHeading(cache.ped))
+    local player = Ox.GetPlayer()
 
-    while player do
-        print(player.test or 'nil')
+    if not player.charId then return end
+
+    print(player)
+    print(player.getCoords())
+    print(player.getGroup("police"))
+
+    while player.charId do
+        print(player.stateId)
         Wait(1000)
     end
 
     print('logged out!')
 end
 
-RegisterNetEvent('ox:playerLoaded', init)
+CreateThread(init)
 
-if player then
-    CreateThread(init)
-end
+RegisterNetEvent('ox:playerLoaded', init)
 
 RegisterNetEvent('ox:playerLogout', function()
     print('logged out')
