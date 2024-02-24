@@ -7,7 +7,7 @@ settings:
 dependencies:
   '@overextended/ox_core':
     specifier: latest
-    version: 0.21.0
+    version: 0.21.1
   '@overextended/ox_lib':
     specifier: latest
     version: 3.16.3
@@ -250,8 +250,8 @@ packages:
     resolution: {integrity: sha512-phuBBGdDPxZiZyw5CaFs1XWfvllnEtwATMdLaNucwMofVg/O/FjlP1bTUq4SOm4qhSZ4Zdo351ijHzBSIbZs6g==}
     dev: false
 
-  /@overextended/ox_core@0.21.0:
-    resolution: {integrity: sha512-QVLHODMBa/OO1XuPVCD9QynsQtLUxQXu5o/pwGDew9ZTGCG/l5E6SlTe3X/VCe3knabjJ77iAhhuSsTWaUYDxw==}
+  /@overextended/ox_core@0.21.1:
+    resolution: {integrity: sha512-aQrCrbzBQB21Kvkirv0/2gSWkSe98ybAN4RVYGdJjbycdZf3/94piuuj8eqztg2OvtoZbwX9nBk/Rquiwo82yw==}
     engines: {node: '>=16.9.1'}
     dependencies:
       '@overextended/ox_lib': 3.16.3
